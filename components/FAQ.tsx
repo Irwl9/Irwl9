@@ -4,28 +4,28 @@ import { useState } from "react";
 
 const faqs = [
   {
-    q: "Is there a free plan?",
-    a: "Yes! Our Starter plan is free forever for up to 5 team members and 10 projects. No credit card required to sign up.",
+    q: "هل هناك خطة مجانية؟",
+    a: "نعم! خطتنا المبتدئة مجانية للأبد لما يصل إلى 5 أعضاء و10 مشاريع. لا حاجة لبطاقة ائتمان للتسجيل.",
   },
   {
-    q: "Can I switch plans at any time?",
-    a: "Absolutely. You can upgrade, downgrade, or cancel your plan at any time from your account settings. Billing is prorated.",
+    q: "هل يمكنني تغيير الخطة في أي وقت؟",
+    a: "بالتأكيد. يمكنك الترقية أو التخفيض أو إلغاء خطتك في أي وقت من إعدادات حسابك. يُحسب الدفع بشكل تناسبي.",
   },
   {
-    q: "How does the AI automation work?",
-    a: "FlowSaaS AI analyzes your task patterns to auto-generate subtasks, suggest assignees, write summaries, and surface blockers. Pro plans get 50 AI runs/month; Enterprise gets unlimited.",
+    q: "كيف تعمل أتمتة الذكاء الاصطناعي؟",
+    a: "يحلل ذكاء FlowSaaS الاصطناعي أنماط مهامك لتوليد مهام فرعية تلقائياً، واقتراح مكلفين، وكتابة ملخصات، وتحديد العوائق. الخطط المحترفة تحصل على 50 تشغيلاً شهرياً؛ المؤسسات تحصل على عدد غير محدود.",
   },
   {
-    q: "Is my data secure?",
-    a: "We're SOC 2 Type II certified, use end-to-end encryption at rest and in transit, and offer SSO/SAML for Enterprise customers. We never sell your data.",
+    q: "هل بياناتي آمنة؟",
+    a: "نحن معتمدون وفق SOC 2 النوع الثاني، ونستخدم التشفير الشامل للبيانات في وضع السكون وأثناء النقل، ونقدم تسجيل الدخول الموحد لعملاء المؤسسات. لا نبيع بياناتك أبداً.",
   },
   {
-    q: "What integrations do you support?",
-    a: "FlowSaaS integrates with Slack, GitHub, Figma, Google Workspace, Zapier, and 50+ tools. Custom webhooks and a full REST API are available on Pro and above.",
+    q: "ما التكاملات التي تدعمونها؟",
+    a: "يتكامل FlowSaaS مع Slack وGitHub وFigma وGoogle Workspace وZapier وأكثر من 50 أداة. الخطافات المخصصة وواجهة REST API الكاملة متاحة للخطة المحترفة وما فوق.",
   },
   {
-    q: "Do you offer discounts for nonprofits or education?",
-    a: "Yes — we offer 50% off for verified nonprofits and educational institutions. Reach out to our team with proof of status to apply.",
+    q: "هل تقدمون خصومات للمنظمات غير الربحية أو التعليم؟",
+    a: "نعم — نقدم خصماً بنسبة 50% للمنظمات غير الربحية والمؤسسات التعليمية الموثقة. تواصل مع فريقنا بإثبات الوضع للتقديم.",
   },
 ];
 
@@ -40,12 +40,12 @@ export default function FAQ() {
     >
       <div className="mx-auto max-w-3xl">
         <div className="text-center mb-16">
-          <span className="clay-badge mb-4 inline-flex">FAQ</span>
+          <span className="clay-badge mb-4 inline-flex">الأسئلة الشائعة</span>
           <h2 id="faq-heading" className="section-heading mb-4">
-            Got questions?
+            هل لديك أسئلة؟
           </h2>
           <p className="section-sub">
-            Everything you need to know before you dive in.
+            كل ما تحتاج معرفته قبل أن تبدأ.
           </p>
         </div>
 
@@ -55,7 +55,7 @@ export default function FAQ() {
             return (
               <div key={faq.q} className="clay-card overflow-hidden">
                 <button
-                  className="w-full flex items-center justify-between px-6 py-4 text-left gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary focus-visible:ring-inset rounded-clay-lg"
+                  className="w-full flex items-center justify-between px-6 py-4 text-right gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary focus-visible:ring-inset rounded-clay-lg"
                   aria-expanded={isOpen}
                   aria-controls={`faq-answer-${i}`}
                   onClick={() => setOpen(isOpen ? null : i)}

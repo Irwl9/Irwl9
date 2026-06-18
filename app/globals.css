@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-nunito: 'Nunito', sans-serif;
+  --font-cairo: 'Cairo', sans-serif;
 }
 
 @layer base {
   body {
     @apply bg-clay-bg text-clay-text font-sans antialiased;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Cairo', sans-serif;
   }
 
   * {

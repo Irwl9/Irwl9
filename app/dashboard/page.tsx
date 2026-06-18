@@ -24,14 +24,14 @@ export default async function DashboardPage() {
       {/* Header */}
       <div className="mb-10">
         <h1 className="text-3xl font-black text-clay-text mb-1">
-          Morning, {firstName}.
+          صباح الخير، {firstName}.
         </h1>
         <p className="text-clay-muted font-semibold">
-          Here&apos;s what needs your attention today.
+          إليك ما يحتاج انتباهك اليوم.
         </p>
       </div>
 
-      {/* Empty state — chief-of-staff voice */}
+      {/* Empty state */}
       <div className="clay-card p-12 text-center">
         <div className="w-16 h-16 mx-auto mb-5 rounded-clay-lg bg-[#EDE9FF] border-2 border-[#C4BFEF] flex items-center justify-center shadow-clay">
           <svg
@@ -48,16 +48,16 @@ export default async function DashboardPage() {
           </svg>
         </div>
         <h2 className="text-xl font-extrabold text-clay-text mb-2">
-          Nothing&apos;s on fire.
+          لا شيء يحترق.
         </h2>
         <p className="text-clay-muted mb-6 max-w-xs mx-auto">
-          Give me a goal and I&apos;ll get the team moving.
+          أعطني هدفاً وسأحرك الفريق.
         </p>
         <button
           className="clay-btn-primary px-6 py-3 text-sm"
-          aria-label="Set a goal for your team"
+          aria-label="حدد هدفاً لفريقك"
         >
-          Set a goal
+          حدد هدفاً
         </button>
       </div>
 
@@ -65,18 +65,18 @@ export default async function DashboardPage() {
       <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
         {[
           {
-            title: "Daily Brief",
-            desc: "What shipped, what's blocked, who's behind — on demand.",
+            title: "الموجز اليومي",
+            desc: "ما تم إنجازه، وما هو معلق، ومن يتأخر — عند الطلب.",
             color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary",
           },
           {
-            title: "The Nudge",
-            desc: "Stale task? I'll draft the chase message. You just send it.",
+            title: "التنبيه",
+            desc: "مهمة متأخرة؟ سأكتب رسالة المتابعة. أنت فقط أرسلها.",
             color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C]",
           },
           {
-            title: "Ask me anything",
-            desc: "\"What's at risk this week?\" Answered from your real data.",
+            title: "اسألني أي شيء",
+            desc: "\"ما الذي في خطر هذا الأسبوع؟\" إجابة من بياناتك الحقيقية.",
             color: "bg-[#E0F9F4] border-[#A8EEE0] text-[#2AB090]",
           },
         ].map((card) => (
@@ -88,7 +88,7 @@ export default async function DashboardPage() {
             <div
               className={`inline-flex items-center px-2.5 py-1 rounded-full border text-xs font-bold mb-3 ${card.color}`}
             >
-              Coming soon
+              قريباً
             </div>
             <h3 className="font-extrabold text-clay-text text-sm mb-1">
               {card.title}

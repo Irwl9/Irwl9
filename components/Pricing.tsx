@@ -4,69 +4,66 @@ import { useState } from "react";
 
 const plans = [
   {
-    name: "Starter",
+    name: "المبتدئ",
     monthlyPrice: 0,
     yearlyPrice: 0,
-    description: "Perfect for solo founders and small teams getting started.",
+    description: "مثالي للمؤسسين المستقلين والفرق الصغيرة التي تبدأ للتو.",
     features: [
-      "Up to 5 members",
-      "10 active projects",
-      "5 GB storage",
-      "Basic analytics",
-      "Email support",
+      "حتى 5 أعضاء",
+      "10 مشاريع نشطة",
+      "5 جيجابايت تخزين",
+      "تحليلات أساسية",
+      "دعم البريد الإلكتروني",
     ],
-    missing: ["AI automation", "SSO / SAML", "Priority support"],
-    cta: "Get started free",
+    missing: ["أتمتة الذكاء الاصطناعي", "تسجيل الدخول الموحد", "دعم ذو أولوية"],
+    cta: "ابدأ مجاناً",
     ctaClass: "clay-btn-secondary w-full text-center",
     highlighted: false,
     badge: null,
     cardClass: "clay-card",
-    shadow: "shadow-clay",
   },
   {
-    name: "Pro",
+    name: "المحترف",
     monthlyPrice: 18,
     yearlyPrice: 14,
-    description: "Everything teams need to ship faster and collaborate better.",
+    description: "كل ما تحتاجه الفرق للإنجاز بشكل أسرع والتعاون بشكل أفضل.",
     features: [
-      "Unlimited members",
-      "Unlimited projects",
-      "100 GB storage",
-      "Advanced analytics",
-      "AI automation (50 runs/mo)",
-      "Priority email support",
-      "Custom integrations",
+      "أعضاء غير محدودين",
+      "مشاريع غير محدودة",
+      "100 جيجابايت تخزين",
+      "تحليلات متقدمة",
+      "أتمتة ذكاء اصطناعي (50 تشغيل/شهر)",
+      "دعم بريد إلكتروني ذو أولوية",
+      "تكاملات مخصصة",
     ],
-    missing: ["SSO / SAML", "Dedicated CSM"],
-    cta: "Start Pro free trial",
+    missing: ["تسجيل الدخول الموحد", "مدير نجاح عملاء مخصص"],
+    cta: "ابدأ تجربة المحترف مجاناً",
     ctaClass: "clay-btn-primary w-full text-center",
     highlighted: true,
-    badge: "Most popular",
+    badge: "الأكثر شيوعاً",
     cardClass:
-      "bg-clay-primary border-2 border-[#6356D5] rounded-clay-lg shadow-clay text-white scale-105",
-    shadow: "shadow-[6px_6px_0_0_#4A40B0]",
+      "bg-clay-primary border-2 border-[#6356D5] rounded-clay-lg text-white scale-105",
   },
   {
-    name: "Enterprise",
+    name: "المؤسسات",
     monthlyPrice: 49,
     yearlyPrice: 38,
-    description: "Custom controls, compliance, and support for large organizations.",
+    description: "ضوابط مخصصة وامتثال ودعم للمنظمات الكبيرة.",
     features: [
-      "Unlimited everything",
-      "SSO / SAML",
-      "SOC 2 compliance",
-      "AI automation (unlimited)",
-      "Dedicated CSM",
-      "Custom onboarding",
-      "99.99% SLA",
+      "كل شيء غير محدود",
+      "تسجيل الدخول الموحد / SAML",
+      "امتثال SOC 2",
+      "أتمتة ذكاء اصطناعي (غير محدودة)",
+      "مدير نجاح عملاء مخصص",
+      "تأهيل مخصص",
+      "اتفاقية مستوى خدمة 99.99%",
     ],
     missing: [],
-    cta: "Contact sales",
+    cta: "تواصل مع المبيعات",
     ctaClass: "clay-btn-secondary w-full text-center",
     highlighted: false,
     badge: null,
     cardClass: "clay-card",
-    shadow: "shadow-clay",
   },
 ];
 
@@ -103,30 +100,27 @@ export default function Pricing() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <span className="clay-badge mb-4 inline-flex">Simple pricing</span>
+          <span className="clay-badge mb-4 inline-flex">أسعار بسيطة</span>
           <h2 id="pricing-heading" className="section-heading mb-4">
-            Pick a plan, <span className="text-clay-primary">start shipping</span>
+            اختر خطة،{" "}
+            <span className="text-clay-primary">وابدأ الإنجاز</span>
           </h2>
           <p className="section-sub mb-8">
-            No hidden fees. No contracts. Cancel anytime.
+            لا رسوم خفية. لا عقود. إلغاء في أي وقت.
           </p>
 
-          {/* Billing toggle */}
-          <div className="inline-flex items-center gap-3 clay-card px-5 py-3 rounded-clay-lg">
-            <span
-              className={`font-bold text-sm ${!yearly ? "text-clay-primary" : "text-clay-muted"}`}
-            >
-              Monthly
+          {/* Billing toggle — kept dir=ltr for toggle UX */}
+          <div className="inline-flex items-center gap-3 clay-card px-5 py-3 rounded-clay-lg" dir="ltr">
+            <span className={`font-bold text-sm ${!yearly ? "text-clay-primary" : "text-clay-muted"}`}>
+              شهري
             </span>
             <button
               role="switch"
               aria-checked={yearly}
-              aria-label="Toggle yearly billing"
+              aria-label="تفعيل الفوترة السنوية"
               onClick={() => setYearly(!yearly)}
               className={`relative w-12 h-6 rounded-full border-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary ${
-                yearly
-                  ? "bg-clay-primary border-[#6356D5]"
-                  : "bg-white border-[#C4BFEF]"
+                yearly ? "bg-clay-primary border-[#6356D5]" : "bg-white border-[#C4BFEF]"
               }`}
             >
               <span
@@ -135,16 +129,13 @@ export default function Pricing() {
                 }`}
               />
             </button>
-            <span
-              className={`font-bold text-sm ${yearly ? "text-clay-primary" : "text-clay-muted"}`}
-            >
-              Yearly
-              <span className="ml-1.5 clay-badge text-xs py-0.5 px-2">Save 20%</span>
+            <span className={`font-bold text-sm ${yearly ? "text-clay-primary" : "text-clay-muted"}`}>
+              سنوي
+              <span className="mr-1.5 clay-badge text-xs py-0.5 px-2">وفّر 20%</span>
             </span>
           </div>
         </div>
 
-        {/* Plan cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
           {plans.map((plan) => (
             <div key={plan.name} className={`relative p-6 ${plan.cardClass}`}>
@@ -157,36 +148,20 @@ export default function Pricing() {
               )}
 
               <div className="mb-4">
-                <h3
-                  className={`text-xl font-extrabold mb-1 ${
-                    plan.highlighted ? "text-white" : "text-clay-text"
-                  }`}
-                >
+                <h3 className={`text-xl font-extrabold mb-1 ${plan.highlighted ? "text-white" : "text-clay-text"}`}>
                   {plan.name}
                 </h3>
-                <p
-                  className={`text-sm ${
-                    plan.highlighted ? "text-white/70" : "text-clay-muted"
-                  }`}
-                >
+                <p className={`text-sm ${plan.highlighted ? "text-white/70" : "text-clay-muted"}`}>
                   {plan.description}
                 </p>
               </div>
 
-              <div className="mb-6">
-                <span
-                  className={`text-5xl font-black ${
-                    plan.highlighted ? "text-white" : "text-clay-text"
-                  }`}
-                >
+              <div className="mb-6" dir="ltr">
+                <span className={`text-5xl font-black ${plan.highlighted ? "text-white" : "text-clay-text"}`}>
                   ${yearly ? plan.yearlyPrice : plan.monthlyPrice}
                 </span>
-                <span
-                  className={`text-sm font-semibold ml-1 ${
-                    plan.highlighted ? "text-white/70" : "text-clay-muted"
-                  }`}
-                >
-                  / mo {yearly && plan.yearlyPrice > 0 && "(billed yearly)"}
+                <span className={`text-sm font-semibold ml-1 ${plan.highlighted ? "text-white/70" : "text-clay-muted"}`}>
+                  / شهر {yearly && plan.yearlyPrice > 0 && "(يُدفع سنوياً)"}
                 </span>
               </div>
 
@@ -207,7 +182,7 @@ export default function Pricing() {
                 {plan.cta}
               </a>
 
-              <ul className="space-y-2" role="list" aria-label={`${plan.name} plan features`}>
+              <ul className="space-y-2" role="list" aria-label={`مزايا خطة ${plan.name}`}>
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-center gap-2 text-sm">
                     <CheckIcon light={plan.highlighted} />
@@ -230,7 +205,7 @@ export default function Pricing() {
         </div>
 
         <p className="text-center text-sm text-clay-muted mt-8 font-semibold">
-          All plans include a 14-day free trial. No credit card required.
+          جميع الخطط تتضمن تجربة مجانية لمدة 14 يوماً. لا حاجة لبطاقة ائتمان.
         </p>
       </div>
     </section>

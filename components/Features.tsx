@@ -8,9 +8,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary shadow-clay",
-    title: "Task management",
+    title: "إدارة المهام",
     description:
-      "Create, assign, and track tasks with ease. Drag and drop boards, custom labels, and due dates keep your team perfectly in sync.",
+      "أنشئ المهام وعيّنها وتتبعها بسهولة. تساعد لوحات السحب والإفلات والتسميات المخصصة وتواريخ الاستحقاق فريقك على البقاء منسجماً تماماً.",
   },
   {
     icon: (
@@ -21,9 +21,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C] shadow-clay-pink",
-    title: "Team collaboration",
+    title: "تعاون الفريق",
     description:
-      "Real-time comments, @mentions, and shared views so your whole team stays aligned — wherever they are in the world.",
+      "تعليقات في الوقت الفعلي، ومذكرات، وطرق عرض مشتركة تُبقي فريقك بأكمله منسجماً — أينما كانوا في العالم.",
   },
   {
     icon: (
@@ -32,9 +32,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#E0F9F4] border-[#A8EEE0] text-[#2AB090] shadow-clay-mint",
-    title: "AI automation",
+    title: "أتمتة الذكاء الاصطناعي",
     description:
-      "Let AI handle the busywork. Auto-categorize tasks, write summaries, generate subtasks, and surface what actually needs your attention.",
+      "دع الذكاء الاصطناعي يتولى الأعمال المتكررة. تصنيف تلقائي للمهام، وكتابة ملخصات، وتوليد مهام فرعية، وتسليط الضوء على ما يستحق انتباهك.",
   },
   {
     icon: (
@@ -43,9 +43,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#FFF4E0] border-[#FFD9A0] text-[#D97706] shadow-[3px_3px_0_0_#FFD9A0]",
-    title: "Analytics & insights",
+    title: "التحليلات والرؤى",
     description:
-      "Beautiful charts and dashboards that show team velocity, burndown rates, and bottlenecks. Make data-driven decisions effortlessly.",
+      "مخططات ولوحات بيانات رائعة تُظهر سرعة الفريق ومعدلات الإنجاز والعوائق. اتخذ قرارات قائمة على البيانات بسهولة.",
   },
   {
     icon: (
@@ -54,9 +54,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary shadow-clay",
-    title: "Smart notifications",
+    title: "الإشعارات الذكية",
     description:
-      "Get the right update at the right time. Digest mode, quiet hours, and intelligent filtering keep you informed without the noise.",
+      "احصل على التحديث الصحيح في الوقت المناسب. وضع الملخص والساعات الهادئة والتصفية الذكية تُبقيك على اطلاع دون ضوضاء.",
   },
   {
     icon: (
@@ -66,9 +66,9 @@ const features = [
       </svg>
     ),
     color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C] shadow-clay-pink",
-    title: "Enterprise security",
+    title: "أمان المؤسسات",
     description:
-      "SOC 2 certified, end-to-end encrypted, SSO/SAML support, and granular permissions. Enterprise-grade security, startup-friendly simplicity.",
+      "معتمد وفق SOC 2، ومشفر من طرف إلى طرف، ويدعم SSO/SAML وصلاحيات دقيقة. أمان على مستوى المؤسسات بسهولة الشركات الناشئة.",
   },
 ];
 
@@ -80,33 +80,26 @@ export default function Features() {
       aria-labelledby="features-heading"
     >
       <div className="mx-auto max-w-6xl">
-        {/* Section header */}
         <div className="text-center mb-16">
-          <span className="clay-badge mb-4 inline-flex">Everything you need</span>
+          <span className="clay-badge mb-4 inline-flex">كل ما تحتاجه</span>
           <h2 id="features-heading" className="section-heading mb-4">
-            Built for teams that{" "}
-            <span className="text-clay-primary">ship</span>
+            مصمم للفرق التي{" "}
+            <span className="text-clay-primary">تُنجز</span>
           </h2>
           <p className="section-sub">
-            Powerful enough for enterprises, simple enough for startups. FlowSaaS adapts to how your team actually works.
+            قوي بما يكفي للمؤسسات، وبسيط بما يكفي للشركات الناشئة. يتكيف FlowSaaS مع طريقة عمل فريقك الفعلية.
           </p>
         </div>
 
-        {/* Feature grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature) => (
-            <article
-              key={feature.title}
-              className="clay-card p-6 group"
-            >
-              {/* Icon */}
+            <article key={feature.title} className="clay-card p-6 group">
               <div
                 className={`w-12 h-12 rounded-clay border-2 flex items-center justify-center mb-4 transition-transform duration-200 group-hover:scale-110 ${feature.color}`}
                 aria-hidden="true"
               >
                 {feature.icon}
               </div>
-
               <h3 className="text-xl font-extrabold text-clay-text mb-2">
                 {feature.title}
               </h3>

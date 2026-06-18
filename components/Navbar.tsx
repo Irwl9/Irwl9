@@ -3,10 +3,10 @@
 import { useState } from "react";
 
 const navLinks = [
-  { label: "Features", href: "#features" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Testimonials", href: "#testimonials" },
-  { label: "FAQ", href: "#faq" },
+  { label: "المزايا", href: "#features" },
+  { label: "الأسعار", href: "#pricing" },
+  { label: "آراء العملاء", href: "#testimonials" },
+  { label: "الأسئلة الشائعة", href: "#faq" },
 ];
 
 export default function Navbar() {
@@ -16,7 +16,7 @@ export default function Navbar() {
     <nav
       className="sticky top-0 z-50 w-full"
       role="navigation"
-      aria-label="Main navigation"
+      aria-label="التنقل الرئيسي"
     >
       <div className="mx-auto max-w-6xl px-4 py-3">
         <div className="clay-card flex items-center justify-between px-5 py-3 rounded-clay-lg">
@@ -24,7 +24,7 @@ export default function Navbar() {
           <a
             href="#"
             className="flex items-center gap-2 font-black text-xl text-clay-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md"
-            aria-label="FlowSaaS home"
+            aria-label="الصفحة الرئيسية لـ FlowSaaS"
           >
             <span
               className="w-8 h-8 rounded-xl bg-clay-primary flex items-center justify-center text-white text-sm font-black shadow-clay-sm border-2 border-[#6356D5]"
@@ -55,10 +55,10 @@ export default function Navbar() {
               href="/login"
               className="font-bold text-clay-muted hover:text-clay-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md px-2"
             >
-              Log in
+              تسجيل الدخول
             </a>
             <a href="/signup" className="clay-btn-primary text-sm py-2 px-5">
-              Get started free
+              ابدأ مجاناً
             </a>
           </div>
 
@@ -68,7 +68,7 @@ export default function Navbar() {
             onClick={() => setOpen(!open)}
             aria-expanded={open}
             aria-controls="mobile-menu"
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? "إغلاق القائمة" : "فتح القائمة"}
           >
             <svg
               className="w-5 h-5"
@@ -107,10 +107,10 @@ export default function Navbar() {
               href="/login"
               className="px-4 py-2.5 rounded-clay font-semibold text-clay-muted hover:bg-[#EDE9FF] transition-colors"
             >
-              Log in
+              تسجيل الدخول
             </a>
             <a href="/signup" className="clay-btn-primary text-center text-sm py-2.5">
-              Get started free
+              ابدأ مجاناً
             </a>
           </div>
         )}

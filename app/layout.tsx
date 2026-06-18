@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "FlowSaaS — Work smarter, together",
-  description: "The all-in-one SaaS platform that helps modern teams collaborate, ship, and grow.",
+  title: "FlowSaaS — دع العمل يدير نفسه",
+  description: "المنصة المتكاملة التي تساعد الفرق على التعاون والإنجاز والنمو.",
 };
 
 export default function RootLayout({
@@ -12,12 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ar" dir="rtl">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>

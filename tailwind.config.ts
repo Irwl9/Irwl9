@@ -34,7 +34,7 @@ const config: Config = {
         "clay-hover": "8px 8px 0px 0px #B8B2E8, inset 0 1px 0 rgba(255,255,255,0.9)",
       },
       fontFamily: {
-        sans: ["var(--font-nunito)", "Nunito", "system-ui", "sans-serif"],
+        sans: ["var(--font-cairo)", "Cairo", "system-ui", "sans-serif"],
       },
       animation: {
         "float": "float 6s ease-in-out infinite",
