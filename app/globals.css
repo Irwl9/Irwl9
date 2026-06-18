@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-nunito: 'Nunito', sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-clay-bg text-clay-text font-sans antialiased;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .clay-card {
+    @apply bg-white rounded-clay-lg border-2 border-[#E8E4FF] shadow-clay transition-all duration-200;
+  }
+
+  .clay-card:hover {
+    @apply shadow-clay-hover -translate-x-0.5 -translate-y-0.5;
+  }
+
+  .clay-btn-primary {
+    @apply bg-clay-primary text-white font-bold rounded-clay border-2 border-[#6356D5]
+           px-6 py-3 shadow-clay transition-all duration-150 cursor-pointer
+           hover:shadow-clay-hover hover:-translate-x-0.5 hover:-translate-y-0.5
+           active:translate-x-0.5 active:translate-y-0.5 active:shadow-clay-sm;
+  }
+
+  .clay-btn-secondary {
+    @apply bg-white text-clay-primary font-bold rounded-clay border-2 border-[#C4BFEF]
+           px-6 py-3 shadow-clay-sm transition-all duration-150 cursor-pointer
+           hover:shadow-clay hover:-translate-x-0.5 hover:-translate-y-0.5
+           active:translate-x-0.5 active:translate-y-0.5;
+  }
+
+  .clay-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full
+           bg-[#EDE9FF] text-clay-primary font-semibold text-sm
+           border border-[#C4BFEF];
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-black text-clay-text leading-tight;
+  }
+
+  .section-sub {
+    @apply text-lg text-clay-muted leading-relaxed max-w-2xl mx-auto;
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-delay,
+  .animate-bounce-slow {
+    animation: none;
+  }
+}
