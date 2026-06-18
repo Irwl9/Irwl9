@@ -47,7 +47,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
           <a
-            href="#"
+            href="/signup"
             className="clay-btn-primary text-lg px-8 py-4 w-full sm:w-auto"
           >
             Start for free

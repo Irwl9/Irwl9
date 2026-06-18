@@ -52,12 +52,12 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="#"
+              href="/login"
               className="font-bold text-clay-muted hover:text-clay-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md px-2"
             >
               Log in
             </a>
-            <a href="#" className="clay-btn-primary text-sm py-2 px-5">
+            <a href="/signup" className="clay-btn-primary text-sm py-2 px-5">
               Get started free
             </a>
           </div>
@@ -104,12 +104,12 @@ export default function Navbar() {
             ))}
             <hr className="border-[#E8E4FF] my-1" />
             <a
-              href="#"
+              href="/login"
               className="px-4 py-2.5 rounded-clay font-semibold text-clay-muted hover:bg-[#EDE9FF] transition-colors"
             >
               Log in
             </a>
-            <a href="#" className="clay-btn-primary text-center text-sm py-2.5">
+            <a href="/signup" className="clay-btn-primary text-center text-sm py-2.5">
               Get started free
             </a>
           </div>

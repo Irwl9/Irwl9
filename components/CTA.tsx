@@ -36,7 +36,7 @@ export default function CTA() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#" className="clay-btn-primary text-lg px-10 py-4">
+              <a href="/signup" className="clay-btn-primary text-lg px-10 py-4">
                 Start for free — forever
               </a>
               <a
