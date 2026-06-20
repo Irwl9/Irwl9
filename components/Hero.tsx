@@ -124,13 +124,15 @@ export default function Hero() {
               رئيس الأعمال المدعوم بالذكاء الاصطناعي
             </div>
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 text-white">
-              <span className="inline-block animate-slide-up opacity-0" style={{ animationDelay: "0.05s" }}>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl leading-[1.5] mb-6 text-white">
+              <span
+                className="block font-light animate-slide-up opacity-0"
+                style={{ animationDelay: "0.05s" }}
+              >
                 فريقك يعمل.
               </span>
-              <br />
               <span
-                className="gradient-text inline-block animate-slide-up opacity-0"
+                className="block gradient-text font-bold pb-2 animate-slide-up opacity-0"
                 style={{ animationDelay: "0.2s" }}
               >
                 الذكاء يُخطّط.

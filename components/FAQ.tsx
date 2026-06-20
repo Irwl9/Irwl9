@@ -42,7 +42,8 @@ export default function FAQ() {
         <div className="text-center mb-16">
           <span className="clay-badge mb-4 inline-flex">الأسئلة الشائعة</span>
           <h2 id="faq-heading" className="section-heading mb-4">
-            هل لديك أسئلة؟
+            هل لديك{" "}
+            <span className="font-bold text-clay-primary">أسئلة؟</span>
           </h2>
           <p className="section-sub">
             كل ما تحتاج معرفته قبل أن تبدأ.

@@ -84,7 +84,7 @@ export default function Features() {
           <span className="clay-badge mb-4 inline-flex">كل ما تحتاجه</span>
           <h2 id="features-heading" className="section-heading mb-4">
             مصمم للفرق التي{" "}
-            <span className="text-clay-primary">تُنجز</span>
+            <span className="font-bold text-clay-primary">تُنجز</span>
           </h2>
           <p className="section-sub">
             قوي بما يكفي للمؤسسات، وبسيط بما يكفي للشركات الناشئة. يتكيف FlowSaaS مع طريقة عمل فريقك الفعلية.

@@ -51,10 +51,10 @@ export default function HowItWorks() {
           <span className="clay-badge mb-5 inline-flex">كيف يعمل</span>
           <h2
             id="how-heading"
-            className="text-4xl md:text-5xl font-black text-clay-text mb-4"
+            className="text-4xl md:text-5xl font-light text-clay-text mb-4 leading-[1.4]"
           >
             ثلاث خطوات{" "}
-            <span className="text-clay-primary">إلى الانطلاق</span>
+            <span className="font-bold text-clay-primary">إلى الانطلاق</span>
           </h2>
           <p className="text-lg text-clay-muted max-w-xl mx-auto">
             من الاشتراك إلى الخطة الأولى في أقل من خمس دقائق.

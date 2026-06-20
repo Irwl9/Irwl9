@@ -132,10 +132,10 @@ export default function AIFeatures() {
           </div>
           <h2
             id="ai-features-heading"
-            className="text-4xl md:text-5xl font-black text-white mb-4 leading-tight"
+            className="text-4xl md:text-5xl font-light text-white mb-4 leading-[1.4]"
           >
             أربع قدرات{" "}
-            <span className="gradient-text">تُغير قواعد اللعبة</span>
+            <span className="gradient-text font-bold">تُغير قواعد اللعبة</span>
           </h2>
           <p className="text-lg text-white/50 max-w-2xl mx-auto">
             ليس ذكاءً اصطناعياً للديكور — كل ميزة مربوطة ببياناتك الحقيقية وتُنتج نتائج قابلة للتنفيذ.
@@ -162,7 +162,7 @@ export default function AIFeatures() {
                   {f.tag}
                 </div>
 
-                <h3 className="text-xl font-black text-white mb-2">{f.headline}</h3>
+                <h3 className="text-xl font-bold text-white mb-2">{f.headline}</h3>
                 <p className="text-white/55 text-sm leading-relaxed">{f.body}</p>
 
                 {/* Live demo */}

@@ -22,10 +22,10 @@ export default function CTA() {
 
         <h2
           id="cta-heading"
-          className="text-4xl md:text-5xl font-black text-clay-text mb-5 leading-tight"
+          className="text-4xl md:text-5xl font-light text-clay-text mb-5 leading-[1.4]"
         >
           فريقك يستحق{" "}
-          <span className="text-clay-primary">رئيس أعمال ذكي</span>
+          <span className="font-bold text-clay-primary">رئيس أعمال ذكي</span>
         </h2>
 
         <p className="text-lg text-clay-muted mb-10 max-w-xl mx-auto">

@@ -42,10 +42,10 @@ export default function Testimonials() {
           </div>
           <h2
             id="testimonials-heading"
-            className="text-4xl md:text-5xl font-black text-white mb-4"
+            className="text-4xl md:text-5xl font-light text-white mb-4 leading-[1.4]"
           >
             الفرق التي{" "}
-            <span className="gradient-text">تعتمد علينا</span>
+            <span className="gradient-text font-bold">تعتمد علينا</span>
           </h2>
           <p className="text-lg text-white/45 max-w-xl mx-auto">
             آراء حقيقية من فرق حقيقية — لا تقييمات مصطنعة.

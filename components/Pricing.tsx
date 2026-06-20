@@ -103,7 +103,7 @@ export default function Pricing() {
           <span className="clay-badge mb-4 inline-flex">أسعار بسيطة</span>
           <h2 id="pricing-heading" className="section-heading mb-4">
             اختر خطة،{" "}
-            <span className="text-clay-primary">وابدأ الإنجاز</span>
+            <span className="font-bold text-clay-primary">وابدأ الإنجاز</span>
           </h2>
           <p className="section-sub mb-8">
             لا رسوم خفية. لا عقود. إلغاء في أي وقت.

@@ -47,8 +47,13 @@
            bg-[#D6EFE4] text-clay-primary font-semibold text-sm
            border border-[#9FD4BC];
   }
+  /* Light base so accent words (font-bold) pop against a thin heading */
   .section-heading {
-    @apply text-4xl md:text-5xl font-black text-clay-text leading-tight;
+    @apply text-4xl md:text-5xl font-light text-clay-text leading-[1.4];
+  }
+  .section-heading strong,
+  .section-heading b {
+    @apply font-bold;
   }
   .section-sub {
     @apply text-lg text-clay-muted leading-relaxed max-w-2xl mx-auto;
