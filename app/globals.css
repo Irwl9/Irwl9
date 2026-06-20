@@ -1,15 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Mada:wght@300..900&family=Reem+Kufi:wght@400..700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  /* Body / UI text */
-  --font-body: 'Mada', system-ui, sans-serif;
-  /* Display / brand headings (geometric Kufi signature) */
-  --font-display: 'Reem Kufi', 'Mada', sans-serif;
-}
+/* --font-body (Rubik) and --font-display (Reem Kufi) are injected by
+   next/font onto the <html> element in app/layout.tsx. */
 
 /* Registered so the conic-gradient angle can be animated smoothly */
 @property --angle {
