@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* --font-body (Rubik) and --font-display (Reem Kufi) are injected by
-   next/font onto the <html> element in app/layout.tsx. */
+/* --font-brand (IBM Plex Sans Arabic) is injected by next/font onto the
+   <html> element in app/layout.tsx and used everywhere. */
 
 /* Registered so the conic-gradient angle can be animated smoothly */
 @property --angle {
@@ -15,11 +15,10 @@
 @layer base {
   body {
     @apply bg-clay-bg text-clay-text font-sans antialiased;
-    font-family: var(--font-body);
+    font-family: var(--font-brand);
   }
-  /* Reem Kufi as the brand voice on every real heading + opt-in elements */
   h1, h2, h3, h4, .font-display {
-    font-family: var(--font-display);
+    font-family: var(--font-brand);
   }
   * { box-sizing: border-box; }
 }

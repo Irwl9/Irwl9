@@ -1,20 +1,13 @@
 import type { Metadata } from "next";
-import { Reem_Kufi, Rubik } from "next/font/google";
+import { IBM_Plex_Sans_Arabic } from "next/font/google";
 import "./globals.css";
 
-// Body / UI — rounded, distinctive, clearly not Cairo
-const rubik = Rubik({
+// Single practical brand typeface — readable at every size, used for
+// both body/UI (--font-body) and headings/brand (--font-display).
+const ibmPlexArabic = IBM_Plex_Sans_Arabic({
   subsets: ["arabic", "latin"],
-  weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-body",
-  display: "swap",
-});
-
-// Display / brand — geometric Kufi signature
-const reemKufi = Reem_Kufi({
-  subsets: ["arabic", "latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-display",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-brand",
   display: "swap",
 });
 
@@ -29,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className={`${rubik.variable} ${reemKufi.variable}`}>
+    <html lang="ar" dir="rtl" className={ibmPlexArabic.variable}>
       <body className="min-h-screen bg-clay-bg">
         {children}
       </body>
