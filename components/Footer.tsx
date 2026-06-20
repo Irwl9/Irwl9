@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <a
               href="#"
-              className="flex items-center gap-2 font-black text-xl text-clay-primary mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md w-fit"
+              className="font-display tracking-tight flex items-center gap-2 font-black text-xl text-clay-primary mb-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md w-fit"
               aria-label="الصفحة الرئيسية لـ FlowSaaS"
             >
               <span

@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mada:wght@300..900&family=Reem+Kufi:wght@400..700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --font-cairo: 'Cairo', sans-serif;
+  /* Body / UI text */
+  --font-body: 'Mada', system-ui, sans-serif;
+  /* Display / brand headings (geometric Kufi signature) */
+  --font-display: 'Reem Kufi', 'Mada', sans-serif;
 }
 
 /* Registered so the conic-gradient angle can be animated smoothly */
@@ -18,7 +21,11 @@
 @layer base {
   body {
     @apply bg-clay-bg text-clay-text font-sans antialiased;
-    font-family: 'Cairo', sans-serif;
+    font-family: var(--font-body);
+  }
+  /* Reem Kufi as the brand voice on every real heading + opt-in elements */
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
   }
   * { box-sizing: border-box; }
 }

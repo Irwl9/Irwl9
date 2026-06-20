@@ -43,7 +43,8 @@ const config: Config = {
         "glow-pink": "0 0 40px rgba(224,168,46,0.3)",
       },
       fontFamily: {
-        sans: ["var(--font-cairo)", "Cairo", "system-ui", "sans-serif"],
+        sans: ["var(--font-body)", "Mada", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "Reem Kufi", "sans-serif"],
       },
       animation: {
         "float": "float 6s ease-in-out infinite",

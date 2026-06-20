@@ -40,7 +40,7 @@ export default async function DashboardLayout({
         <div className="px-5 py-5 border-b-2 border-[#CDEADE]">
           <a
             href="/"
-            className="flex items-center gap-2 font-black text-lg text-clay-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md"
+            className="font-display tracking-tight flex items-center gap-2 font-black text-lg text-clay-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md"
           >
             <span className="w-7 h-7 rounded-lg bg-clay-primary flex items-center justify-center text-white text-xs font-black border-2 border-[#075438] flex-shrink-0">
               F

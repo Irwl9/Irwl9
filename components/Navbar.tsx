@@ -50,7 +50,7 @@ export default function Navbar() {
           >
             F
           </span>
-          <span className={`transition-colors font-black ${dark ? "text-white" : "text-clay-text"}`}>
+          <span className={`font-display tracking-tight transition-colors font-black ${dark ? "text-white" : "text-clay-text"}`}>
             FlowSaaS
           </span>
         </a>
