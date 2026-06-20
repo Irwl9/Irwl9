@@ -18,7 +18,7 @@ function LoginForm() {
       </p>
 
       {justVerified && (
-        <div className="mb-4 px-4 py-3 rounded-clay bg-[#E0F9F4] border-2 border-[#A8EEE0] text-[#2AB090] text-sm font-semibold">
+        <div className="mb-4 px-4 py-3 rounded-clay bg-[#D6F6EC] border-2 border-[#9DE9CE] text-[#0D9C6E] text-sm font-semibold">
           تحقق من بريدك الإلكتروني لتأكيد حسابك، ثم سجل الدخول هنا.
         </div>
       )}
@@ -26,7 +26,7 @@ function LoginForm() {
       {state.error && (
         <div
           role="alert"
-          className="mb-4 px-4 py-3 rounded-clay bg-[#FFE4ED] border-2 border-[#FFBFCE] text-[#E8467C] text-sm font-semibold"
+          className="mb-4 px-4 py-3 rounded-clay bg-[#FBF1D8] border-2 border-[#F1DA9A] text-[#B07D14] text-sm font-semibold"
         >
           {state.error}
         </div>
@@ -44,7 +44,7 @@ function LoginForm() {
             autoComplete="email"
             required
             dir="ltr"
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors text-left"
             placeholder="you@company.com"
@@ -70,7 +70,7 @@ function LoginForm() {
             autoComplete="current-password"
             required
             dir="ltr"
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors"
             placeholder="••••••••"

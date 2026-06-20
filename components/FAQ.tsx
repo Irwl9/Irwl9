@@ -62,7 +62,7 @@ export default function FAQ() {
                 >
                   <span className="font-extrabold text-clay-text">{faq.q}</span>
                   <span
-                    className={`flex-shrink-0 w-7 h-7 rounded-full border-2 border-[#C4BFEF] bg-[#EDE9FF] flex items-center justify-center text-clay-primary transition-transform duration-200 ${
+                    className={`flex-shrink-0 w-7 h-7 rounded-full border-2 border-[#9FD4BC] bg-[#D6EFE4] flex items-center justify-center text-clay-primary transition-transform duration-200 ${
                       isOpen ? "rotate-45" : ""
                     }`}
                     aria-hidden="true"

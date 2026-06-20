@@ -6,7 +6,7 @@ const steps = [
     title: "أنشئ مساحة عملك",
     body: "سجّل في 30 ثانية، أضف فريقك، وحدّد هدفك الأول. لا إعدادات معقدة، لا أدلة مطوّلة.",
     color: "text-clay-primary",
-    bg: "bg-[#EDE9FF] border-[#C4BFEF]",
+    bg: "bg-[#D6EFE4] border-[#9FD4BC]",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
@@ -17,8 +17,8 @@ const steps = [
     num: "02",
     title: "أخبر الذكاء بأهدافك",
     body: "اكتب هدفك بكلماتك العادية. FlowSaaS يحوّله لخطة مهام مع مواعيد وأصحاب مسؤوليات — خلال ثوانٍ.",
-    color: "text-[#E8467C]",
-    bg: "bg-[#FFE4ED] border-[#FFBFCE]",
+    color: "text-[#B07D14]",
+    bg: "bg-[#FBF1D8] border-[#F1DA9A]",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
@@ -29,8 +29,8 @@ const steps = [
     num: "03",
     title: "ارتحْ. الرئيس يتابع",
     body: "FlowSaaS يُرسل الموجز اليومي، يكتب رسائل المتابعة، ويُنبّهك عند الضرورة فقط. أنت للقرارات الكبيرة فقط.",
-    color: "text-[#2AB090]",
-    bg: "bg-[#E0F9F4] border-[#A8EEE0]",
+    color: "text-[#0D9C6E]",
+    bg: "bg-[#D6F6EC] border-[#9DE9CE]",
     icon: (
       <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -64,7 +64,7 @@ export default function HowItWorks() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
           {/* Connector line — desktop only */}
           <div
-            className="hidden md:block absolute top-14 right-[calc(33%+24px)] left-[calc(33%+24px)] h-0.5 bg-gradient-to-l from-[#C4BFEF] via-[#C4BFEF] to-[#C4BFEF] z-0"
+            className="hidden md:block absolute top-14 right-[calc(33%+24px)] left-[calc(33%+24px)] h-0.5 bg-gradient-to-l from-[#9FD4BC] via-[#9FD4BC] to-[#9FD4BC] z-0"
             aria-hidden="true"
           />
 

@@ -25,7 +25,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md border-b border-[#E8E4FF] shadow-sm"
+          ? "bg-white/95 backdrop-blur-md border-b border-[#CDEADE] shadow-sm"
           : "bg-transparent"
       }`}
       role="banner"
@@ -44,7 +44,7 @@ export default function Navbar() {
             className={`w-8 h-8 rounded-xl flex items-center justify-center text-sm font-black border-2 flex-shrink-0 transition-all ${
               dark
                 ? "bg-white/20 border-white/30 text-white"
-                : "bg-clay-primary border-[#6356D5] text-white"
+                : "bg-clay-primary border-[#075438] text-white"
             }`}
             aria-hidden="true"
           >
@@ -64,7 +64,7 @@ export default function Navbar() {
                 className={`px-4 py-2 rounded-clay font-semibold text-sm transition-colors ${
                   dark
                     ? "text-white/70 hover:text-white hover:bg-white/10"
-                    : "text-clay-muted hover:text-clay-text hover:bg-[#EDE9FF]"
+                    : "text-clay-muted hover:text-clay-text hover:bg-[#D6EFE4]"
                 }`}
               >
                 {link.label}
@@ -88,7 +88,7 @@ export default function Navbar() {
             className={`font-bold text-sm px-5 py-2.5 rounded-clay border-2 transition-all ${
               dark
                 ? "bg-white/15 text-white border-white/30 hover:bg-white/25 backdrop-blur-sm"
-                : "bg-clay-primary text-white border-[#6356D5] shadow-clay-sm hover:shadow-clay hover:-translate-x-0.5 hover:-translate-y-0.5"
+                : "bg-clay-primary text-white border-[#075438] shadow-clay-sm hover:shadow-clay hover:-translate-x-0.5 hover:-translate-y-0.5"
             }`}
           >
             ابدأ مجاناً
@@ -115,19 +115,19 @@ export default function Navbar() {
       {open && (
         <div
           id="mobile-menu"
-          className="md:hidden bg-white border-b border-[#E8E4FF] px-5 py-4 flex flex-col gap-1"
+          className="md:hidden bg-white border-b border-[#CDEADE] px-5 py-4 flex flex-col gap-1"
         >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="px-4 py-2.5 rounded-clay font-semibold text-sm text-clay-muted hover:text-clay-text hover:bg-[#EDE9FF] transition-colors"
+              className="px-4 py-2.5 rounded-clay font-semibold text-sm text-clay-muted hover:text-clay-text hover:bg-[#D6EFE4] transition-colors"
             >
               {link.label}
             </a>
           ))}
-          <hr className="border-[#E8E4FF] my-2" />
+          <hr className="border-[#CDEADE] my-2" />
           <a href="/login" className="px-4 py-2.5 font-semibold text-sm text-clay-muted text-center">
             تسجيل الدخول
           </a>

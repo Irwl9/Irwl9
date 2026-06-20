@@ -6,21 +6,21 @@ const testimonials = [
     name: "سارة المنصور",
     role: "مديرة هندسة البرمجيات",
     avatar: "س",
-    avatarColor: "#7C6FF7",
+    avatarColor: "#0B7A57",
   },
   {
     quote: "\"اسأل الرئيس\" غيّرت طريقة تحضيري للاجتماعات. سؤال واحد وعندي صورة كاملة عن حالة كل مشروع.",
     name: "محمد الخالدي",
     role: "مدير المنتج · شركة ناشئة",
     avatar: "م",
-    avatarColor: "#FF8FAB",
+    avatarColor: "#E0A82E",
   },
   {
     quote: "الذكاء الاصطناعي في FlowSaaS ليس للاستعراض — يكتب رسائل المتابعة بلهجة طبيعية، وفريقي يستجيب لها فعلاً.",
     name: "أميرة الشامسي",
     role: "رئيسة العمليات",
     avatar: "أ",
-    avatarColor: "#5ECFB1",
+    avatarColor: "#34D8A6",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-28 px-5 bg-[#060618] overflow-hidden"
+      className="relative py-28 px-5 bg-[#04140E] overflow-hidden"
       aria-labelledby="testimonials-heading"
     >
       {/* Orb */}
@@ -54,8 +54,8 @@ export default function Testimonials() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
           {testimonials.map((t, i) => (
-            <AnimateIn key={t.name} delay={i * 100} direction="up">
-              <blockquote className="glass-card p-6 flex flex-col gap-5 h-full">
+            <AnimateIn key={t.name} delay={i * 100} direction="up" className="h-full">
+              <blockquote className="glass-card hover-glow p-6 flex flex-col gap-5 h-full">
                 {/* Stars */}
                 <div className="flex gap-1" aria-label="5 من 5 نجوم" role="img">
                   {Array.from({ length: 5 }).map((_, j) => (

@@ -33,7 +33,7 @@ export default async function DashboardPage() {
 
       {/* Empty state */}
       <div className="clay-card p-12 text-center">
-        <div className="w-16 h-16 mx-auto mb-5 rounded-clay-lg bg-[#EDE9FF] border-2 border-[#C4BFEF] flex items-center justify-center shadow-clay">
+        <div className="w-16 h-16 mx-auto mb-5 rounded-clay-lg bg-[#D6EFE4] border-2 border-[#9FD4BC] flex items-center justify-center shadow-clay">
           <svg
             className="w-8 h-8 text-clay-primary"
             fill="none"
@@ -67,17 +67,17 @@ export default async function DashboardPage() {
           {
             title: "الموجز اليومي",
             desc: "ما تم إنجازه، وما هو معلق، ومن يتأخر — عند الطلب.",
-            color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary",
+            color: "bg-[#D6EFE4] border-[#9FD4BC] text-clay-primary",
           },
           {
             title: "التنبيه",
             desc: "مهمة متأخرة؟ سأكتب رسالة المتابعة. أنت فقط أرسلها.",
-            color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C]",
+            color: "bg-[#FBF1D8] border-[#F1DA9A] text-[#B07D14]",
           },
           {
             title: "اسألني أي شيء",
             desc: "\"ما الذي في خطر هذا الأسبوع؟\" إجابة من بياناتك الحقيقية.",
-            color: "bg-[#E0F9F4] border-[#A8EEE0] text-[#2AB090]",
+            color: "bg-[#D6F6EC] border-[#9DE9CE] text-[#0D9C6E]",
           },
         ].map((card) => (
           <div

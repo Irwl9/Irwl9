@@ -7,7 +7,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="border-t-2 border-[#E8E4FF] bg-white/60 px-4 pt-16 pb-8">
+    <footer className="border-t-2 border-[#CDEADE] bg-white/60 px-4 pt-16 pb-8">
       <div className="mx-auto max-w-6xl">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand column */}
@@ -18,7 +18,7 @@ export default function Footer() {
               aria-label="الصفحة الرئيسية لـ FlowSaaS"
             >
               <span
-                className="w-8 h-8 rounded-xl bg-clay-primary flex items-center justify-center text-white text-sm font-black shadow-clay-sm border-2 border-[#6356D5]"
+                className="w-8 h-8 rounded-xl bg-clay-primary flex items-center justify-center text-white text-sm font-black shadow-clay-sm border-2 border-[#075438]"
                 aria-hidden="true"
               >
                 F
@@ -39,7 +39,7 @@ export default function Footer() {
                   key={social.label}
                   href="#"
                   aria-label={social.label}
-                  className="w-8 h-8 rounded-lg border-2 border-[#E8E4FF] bg-white flex items-center justify-center text-clay-muted hover:text-clay-primary hover:border-[#C4BFEF] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary"
+                  className="w-8 h-8 rounded-lg border-2 border-[#CDEADE] bg-white flex items-center justify-center text-clay-muted hover:text-clay-primary hover:border-[#9FD4BC] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d={social.path} />
@@ -74,7 +74,7 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="border-t-2 border-[#E8E4FF] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t-2 border-[#CDEADE] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-clay-muted font-semibold">
             © {new Date().getFullYear()} FlowSaaS Inc. جميع الحقوق محفوظة.
           </p>

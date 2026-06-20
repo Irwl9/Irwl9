@@ -18,7 +18,7 @@ export default function SignupPage() {
       {state.error && (
         <div
           role="alert"
-          className="mb-4 px-4 py-3 rounded-clay bg-[#FFE4ED] border-2 border-[#FFBFCE] text-[#E8467C] text-sm font-semibold"
+          className="mb-4 px-4 py-3 rounded-clay bg-[#FBF1D8] border-2 border-[#F1DA9A] text-[#B07D14] text-sm font-semibold"
         >
           {state.error}
         </div>
@@ -35,7 +35,7 @@ export default function SignupPage() {
             type="text"
             autoComplete="name"
             required
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors"
             placeholder="محمد العلي"
@@ -51,7 +51,7 @@ export default function SignupPage() {
             name="workspace_name"
             type="text"
             required
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors"
             placeholder="شركة المستقبل للتقنية"
@@ -69,7 +69,7 @@ export default function SignupPage() {
             autoComplete="email"
             required
             dir="ltr"
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors text-left"
             placeholder="you@company.com"
@@ -89,7 +89,7 @@ export default function SignupPage() {
             required
             minLength={8}
             dir="ltr"
-            className="w-full px-4 py-3 rounded-clay border-2 border-[#C4BFEF] bg-white text-clay-text font-semibold text-sm
+            className="w-full px-4 py-3 rounded-clay border-2 border-[#9FD4BC] bg-white text-clay-text font-semibold text-sm
                        placeholder:text-clay-muted/50 focus:outline-none focus:border-clay-primary focus:ring-2 focus:ring-clay-primary/20
                        transition-colors"
             placeholder="••••••••"

@@ -42,7 +42,7 @@ const plans = [
     highlighted: true,
     badge: "الأكثر شيوعاً",
     cardClass:
-      "bg-clay-primary border-2 border-[#6356D5] rounded-clay-lg text-white scale-105",
+      "animated-border bg-clay-primary rounded-clay-lg text-white md:scale-105 shadow-glow",
   },
   {
     name: "المؤسسات",
@@ -120,11 +120,11 @@ export default function Pricing() {
               aria-label="تفعيل الفوترة السنوية"
               onClick={() => setYearly(!yearly)}
               className={`relative w-12 h-6 rounded-full border-2 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary ${
-                yearly ? "bg-clay-primary border-[#6356D5]" : "bg-white border-[#C4BFEF]"
+                yearly ? "bg-clay-primary border-[#075438]" : "bg-white border-[#9FD4BC]"
               }`}
             >
               <span
-                className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white border border-[#C4BFEF] shadow transition-transform duration-200 ${
+                className={`absolute top-0.5 left-0.5 w-4 h-4 rounded-full bg-white border border-[#9FD4BC] shadow transition-transform duration-200 ${
                   yearly ? "translate-x-6 border-white" : ""
                 }`}
               />
@@ -141,7 +141,7 @@ export default function Pricing() {
             <div key={plan.name} className={`relative p-6 ${plan.cardClass}`}>
               {plan.badge && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-white text-clay-primary font-black text-xs px-3 py-1 rounded-full border-2 border-[#C4BFEF] shadow-clay-sm">
+                  <span className="bg-white text-clay-primary font-black text-xs px-3 py-1 rounded-full border-2 border-[#9FD4BC] shadow-clay-sm">
                     {plan.badge}
                   </span>
                 </div>

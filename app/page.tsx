@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Stats from "@/components/Stats";
+import Marquee from "@/components/Marquee";
 import AIFeatures from "@/components/AIFeatures";
 import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
@@ -8,10 +9,13 @@ import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ui/ScrollProgress";
 
 export default function Home() {
   return (
     <>
+      <ScrollProgress />
+
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:right-4 clay-btn-primary text-sm"
@@ -24,6 +28,7 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <Stats />
+        <Marquee />
         <AIFeatures />
         <HowItWorks />
         <Testimonials />

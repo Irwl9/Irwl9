@@ -23,10 +23,21 @@ function TypingDots() {
   );
 }
 
+// Deterministic positions so server and client render identically (no hydration mismatch)
+const particles = Array.from({ length: 18 }, (_, i) => ({
+  left: (i * 53) % 100,
+  top: (i * 37 + 11) % 100,
+  size: 2 + (i % 3),
+  delay: (i % 6) * 0.9,
+  duration: 6 + (i % 5) * 1.4,
+}));
+
 export default function Hero() {
   const [activeIdx, setActiveIdx] = useState(0);
   const [showTyping, setShowTyping] = useState(false);
+  const [glow, setGlow] = useState({ x: 50, y: 40 });
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     intervalRef.current = setInterval(() => {
@@ -39,16 +50,57 @@ export default function Hero() {
     return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, []);
 
+  const onMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    const rect = sectionRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    setGlow({
+      x: ((e.clientX - rect.left) / rect.width) * 100,
+      y: ((e.clientY - rect.top) / rect.height) * 100,
+    });
+  };
+
   return (
     <section
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#060618]"
+      ref={sectionRef}
+      onMouseMove={onMouseMove}
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#04140E]"
       aria-label="القسم الرئيسي"
     >
+      {/* Aurora animated mesh */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 aurora opacity-70" />
+
+      {/* Mouse-follow glow */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 transition-[background] duration-300"
+        style={{
+          background: `radial-gradient(420px circle at ${glow.x}% ${glow.y}%, rgba(52,216,166,0.16), transparent 70%)`,
+        }}
+      />
+
       {/* Animated orbs */}
       <div aria-hidden="true" className="pointer-events-none absolute inset-0">
         <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-clay-primary/20 blur-[100px] animate-orb-drift" />
         <div className="absolute bottom-1/4 left-1/3 w-[400px] h-[400px] rounded-full bg-clay-secondary/15 blur-[100px] animate-orb-drift-2" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full bg-clay-accent/10 blur-[80px]" />
+      </div>
+
+      {/* Floating particles */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 overflow-hidden">
+        {particles.map((p, i) => (
+          <span
+            key={i}
+            className="absolute rounded-full bg-clay-accent/40 animate-float"
+            style={{
+              left: `${p.left}%`,
+              top: `${p.top}%`,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              animationDelay: `${p.delay}s`,
+              animationDuration: `${p.duration}s`,
+            }}
+          />
+        ))}
       </div>
 
       {/* Grid lines */}
@@ -57,7 +109,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(124,111,247,1) 1px, transparent 1px), linear-gradient(90deg, rgba(124,111,247,1) 1px, transparent 1px)",
+            "linear-gradient(rgba(52,216,166,1) 1px, transparent 1px), linear-gradient(90deg, rgba(52,216,166,1) 1px, transparent 1px)",
           backgroundSize: "60px 60px",
         }}
       />
@@ -73,19 +125,32 @@ export default function Hero() {
             </div>
 
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[1.1] mb-6 text-white">
-              فريقك يعمل.{" "}
+              <span className="inline-block animate-slide-up opacity-0" style={{ animationDelay: "0.05s" }}>
+                فريقك يعمل.
+              </span>
               <br />
-              <span className="gradient-text">الذكاء يُخطّط.</span>
+              <span
+                className="gradient-text inline-block animate-slide-up opacity-0"
+                style={{ animationDelay: "0.2s" }}
+              >
+                الذكاء يُخطّط.
+              </span>
             </h1>
 
-            <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-lg">
+            <p
+              className="text-lg text-white/60 leading-relaxed mb-10 max-w-lg animate-slide-up opacity-0"
+              style={{ animationDelay: "0.35s" }}
+            >
               FlowSaaS ليس مجرد أداة مهام — إنه رئيس أعمال لا ينام. يرتّب الأولويات، يكتب التقارير، يتابع الفريق، ويحذّرك قبل أن تشتعل المشاكل.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div
+              className="flex flex-col sm:flex-row gap-4 mb-10 animate-slide-up opacity-0"
+              style={{ animationDelay: "0.5s" }}
+            >
               <a
                 href="/signup"
-                className="dark-btn-primary text-base px-8 py-4 text-center"
+                className="dark-btn-primary btn-shine text-base px-8 py-4 text-center"
               >
                 ابدأ مجاناً — بدون بطاقة
               </a>
@@ -104,10 +169,10 @@ export default function Hero() {
             {/* Social proof */}
             <div className="flex items-center gap-3">
               <div className="flex -space-x-2 space-x-reverse">
-                {["#7C6FF7","#FF8FAB","#5ECFB1","#FFBF69"].map((c, i) => (
+                {["#0B7A57","#E0A82E","#34D8A6","#FFBF69"].map((c, i) => (
                   <div
                     key={i}
-                    className="w-8 h-8 rounded-full border-2 border-[#060618] flex items-center justify-center text-white text-xs font-black"
+                    className="w-8 h-8 rounded-full border-2 border-[#04140E] flex items-center justify-center text-white text-xs font-black"
                     style={{ backgroundColor: c }}
                     aria-hidden="true"
                   >
@@ -218,7 +283,7 @@ export default function Hero() {
 
             {/* Floating badges */}
             <div
-              className="absolute -top-4 -right-4 hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-clay bg-[#0D0D2B] border border-clay-accent/30 shadow-glow-sm animate-float"
+              className="absolute -top-4 -right-4 hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-clay bg-[#0A2419] border border-clay-accent/30 shadow-glow-sm animate-float"
               aria-hidden="true"
             >
               <span className="text-clay-accent text-lg">✓</span>
@@ -228,7 +293,7 @@ export default function Hero() {
               </div>
             </div>
             <div
-              className="absolute -bottom-4 -left-4 hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-clay bg-[#0D0D2B] border border-clay-secondary/30 shadow-glow-pink animate-float-delay"
+              className="absolute -bottom-4 -left-4 hidden lg:flex items-center gap-2 px-4 py-2.5 rounded-clay bg-[#0A2419] border border-clay-secondary/30 shadow-glow-pink animate-float-delay"
               aria-hidden="true"
             >
               <span className="text-clay-secondary text-lg">⚠</span>
@@ -241,11 +306,25 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Scroll-down indicator */}
+      <a
+        href="#features"
+        aria-label="انتقل للأسفل"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2 group"
+      >
+        <span className="text-white/35 text-xs font-semibold group-hover:text-white/60 transition-colors">
+          اكتشف المزيد
+        </span>
+        <span className="w-6 h-10 rounded-full border-2 border-white/20 flex justify-center pt-2 group-hover:border-clay-accent/50 transition-colors">
+          <span className="w-1 h-2 rounded-full bg-clay-accent animate-scroll-down" />
+        </span>
+      </a>
+
       {/* Bottom fade to light */}
       <div
         aria-hidden="true"
         className="absolute bottom-0 inset-x-0 h-32 pointer-events-none"
-        style={{ background: "linear-gradient(to bottom, transparent, #EEF2FF)" }}
+        style={{ background: "linear-gradient(to bottom, transparent, #EDF5F0)" }}
       />
     </section>
   );

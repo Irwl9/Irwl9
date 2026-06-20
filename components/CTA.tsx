@@ -33,7 +33,7 @@ export default function CTA() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-          <a href="/signup" className="clay-btn-primary text-lg px-10 py-4">
+          <a href="/signup" className="clay-btn-primary btn-shine text-lg px-10 py-4">
             ابدأ مجاناً الآن
           </a>
           <a href="/login" className="clay-btn-secondary text-lg px-10 py-4">

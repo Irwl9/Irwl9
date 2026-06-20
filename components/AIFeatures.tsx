@@ -8,9 +8,9 @@ const features = [
     tag: "goal engine",
     headline: "هدف واحد → خطة كاملة",
     body: "أخبر FlowSaaS بما تريد تحقيقه. سيقترح المهام، يوزّع المسؤوليات، ويضع مواعيد ذكية بناءً على طاقة فريقك الفعلية.",
-    accent: "#7C6FF7",
-    accentBg: "rgba(124,111,247,0.12)",
-    accentBorder: "rgba(124,111,247,0.25)",
+    accent: "#0B7A57",
+    accentBg: "rgba(52,216,166,0.12)",
+    accentBorder: "rgba(52,216,166,0.25)",
     demo: (
       <div className="space-y-2 mt-4">
         <div className="px-3 py-2 rounded-clay bg-white/8 border border-white/10 text-white/60 text-xs">
@@ -20,7 +20,7 @@ const features = [
           <div key={t} className="flex items-center gap-2 px-3 py-2 rounded-clay bg-white/5 border border-white/8">
             <div
               className="w-2 h-2 rounded-full flex-shrink-0"
-              style={{ backgroundColor: ["#7C6FF7","#FF8FAB","#5ECFB1","#FFBF69"][i] }}
+              style={{ backgroundColor: ["#0B7A57","#E0A82E","#34D8A6","#FFBF69"][i] }}
             />
             <span className="text-white/70 text-xs flex-1">{t}</span>
             <span className="text-white/30 text-[10px]">أ.{i + 1}</span>
@@ -35,9 +35,9 @@ const features = [
     tag: "daily brief",
     headline: "تقرير يومي — بدون جهد",
     body: "كل صباح يكتب FlowSaaS موجزاً لك: ما أُنجز، ما تأخر، من بحاجة للدعم. جاهز للنشر في Slack أو البريد بضغطة واحدة.",
-    accent: "#FF8FAB",
-    accentBg: "rgba(255,143,171,0.12)",
-    accentBorder: "rgba(255,143,171,0.25)",
+    accent: "#E0A82E",
+    accentBg: "rgba(224,168,46,0.12)",
+    accentBorder: "rgba(224,168,46,0.25)",
     demo: (
       <div className="mt-4 p-3 rounded-clay bg-white/5 border border-white/8 space-y-2">
         <p className="text-white/40 text-[10px] uppercase tracking-widest">موجز يوم الأحد · 8:00 ص</p>
@@ -51,7 +51,7 @@ const features = [
             <p className="text-white/65 text-xs leading-relaxed">{item.text}</p>
           </div>
         ))}
-        <button className="mt-1 w-full text-xs font-bold text-[#FF8FAB] border border-[#FF8FAB]/30 rounded-clay px-3 py-1.5 hover:bg-[#FF8FAB]/10 transition-colors">
+        <button className="mt-1 w-full text-xs font-bold text-[#E0A82E] border border-[#E0A82E]/30 rounded-clay px-3 py-1.5 hover:bg-[#E0A82E]/10 transition-colors">
           أرسل إلى Slack ←
         </button>
       </div>
@@ -63,9 +63,9 @@ const features = [
     tag: "smart nudge",
     headline: "متابعة دبلوماسية — لا محرجة",
     body: "مهمة متأخرة؟ FlowSaaS يكتب رسالة المتابعة بنبرة مناسبة. أنت فقط تختار إرسالها — أو تعدّلها في ثانية.",
-    accent: "#5ECFB1",
-    accentBg: "rgba(94,207,177,0.12)",
-    accentBorder: "rgba(94,207,177,0.25)",
+    accent: "#34D8A6",
+    accentBg: "rgba(52,216,166,0.12)",
+    accentBorder: "rgba(52,216,166,0.25)",
     demo: (
       <div className="mt-4 space-y-2">
         <p className="text-white/35 text-[10px] uppercase tracking-widest">رسالة مقترحة · لـ محمد</p>
@@ -73,7 +73,7 @@ const features = [
           مرحباً محمد، أردت أن أتحقق من مهمة &quot;مراجعة العقد&quot;. هل تحتاج دعماً أو تمديداً للموعد؟ 🙏
         </div>
         <div className="flex gap-2">
-          <button className="flex-1 text-xs font-bold text-[#5ECFB1] border border-[#5ECFB1]/30 rounded-clay px-3 py-1.5 hover:bg-[#5ECFB1]/10 transition-colors">
+          <button className="flex-1 text-xs font-bold text-[#34D8A6] border border-[#34D8A6]/30 rounded-clay px-3 py-1.5 hover:bg-[#34D8A6]/10 transition-colors">
             أرسل ✓
           </button>
           <button className="flex-1 text-xs font-bold text-white/40 border border-white/10 rounded-clay px-3 py-1.5 hover:bg-white/5 transition-colors">
@@ -97,7 +97,7 @@ const features = [
         <div className="flex items-center gap-2 px-3 py-2 rounded-clay bg-white/8 border border-white/10">
           <span className="text-white/30 text-xs flex-1">ما المشاريع في خطر؟</span>
           <div className="w-5 h-5 rounded bg-[#FFBF69] flex items-center justify-center">
-            <svg className="w-3 h-3 text-[#060618]" fill="currentColor" viewBox="0 0 16 16">
+            <svg className="w-3 h-3 text-[#04140E]" fill="currentColor" viewBox="0 0 16 16">
               <path d="M1 8a.5.5 0 01.5-.5h11.793l-3.147-3.146a.5.5 0 01.708-.708l4 4a.5.5 0 010 .708l-4 4a.5.5 0 01-.708-.708L13.293 8.5H1.5A.5.5 0 011 8z" />
             </svg>
           </div>
@@ -115,7 +115,7 @@ export default function AIFeatures() {
   return (
     <section
       id="features"
-      className="relative py-28 px-5 bg-[#060618] overflow-hidden"
+      className="relative py-28 px-5 bg-[#04140E] overflow-hidden"
       aria-labelledby="ai-features-heading"
     >
       {/* Background orb */}
@@ -145,9 +145,9 @@ export default function AIFeatures() {
         {/* Bento grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {features.map((f, i) => (
-            <AnimateIn key={f.id} delay={i * 80} direction="up">
+            <AnimateIn key={f.id} delay={i * 80} direction="up" className="h-full">
               <article
-                className="group rounded-clay-xl p-6 border transition-all duration-300 hover:scale-[1.01] cursor-pointer"
+                className="group hover-glow rounded-clay-xl p-6 border transition-all duration-300 cursor-pointer h-full"
                 style={{
                   background: f.accentBg,
                   borderColor: f.accentBorder,

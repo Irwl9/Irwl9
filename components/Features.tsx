@@ -7,7 +7,7 @@ const features = [
         <path d="M9 12h6M9 16h4" />
       </svg>
     ),
-    color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary shadow-clay",
+    color: "bg-[#D6EFE4] border-[#9FD4BC] text-clay-primary shadow-clay",
     title: "إدارة المهام",
     description:
       "أنشئ المهام وعيّنها وتتبعها بسهولة. تساعد لوحات السحب والإفلات والتسميات المخصصة وتواريخ الاستحقاق فريقك على البقاء منسجماً تماماً.",
@@ -20,7 +20,7 @@ const features = [
         <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
       </svg>
     ),
-    color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C] shadow-clay-pink",
+    color: "bg-[#FBF1D8] border-[#F1DA9A] text-[#B07D14] shadow-clay-pink",
     title: "تعاون الفريق",
     description:
       "تعليقات في الوقت الفعلي، ومذكرات، وطرق عرض مشتركة تُبقي فريقك بأكمله منسجماً — أينما كانوا في العالم.",
@@ -31,7 +31,7 @@ const features = [
         <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
       </svg>
     ),
-    color: "bg-[#E0F9F4] border-[#A8EEE0] text-[#2AB090] shadow-clay-mint",
+    color: "bg-[#D6F6EC] border-[#9DE9CE] text-[#0D9C6E] shadow-clay-mint",
     title: "أتمتة الذكاء الاصطناعي",
     description:
       "دع الذكاء الاصطناعي يتولى الأعمال المتكررة. تصنيف تلقائي للمهام، وكتابة ملخصات، وتوليد مهام فرعية، وتسليط الضوء على ما يستحق انتباهك.",
@@ -53,7 +53,7 @@ const features = [
         <path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0" />
       </svg>
     ),
-    color: "bg-[#EDE9FF] border-[#C4BFEF] text-clay-primary shadow-clay",
+    color: "bg-[#D6EFE4] border-[#9FD4BC] text-clay-primary shadow-clay",
     title: "الإشعارات الذكية",
     description:
       "احصل على التحديث الصحيح في الوقت المناسب. وضع الملخص والساعات الهادئة والتصفية الذكية تُبقيك على اطلاع دون ضوضاء.",
@@ -65,7 +65,7 @@ const features = [
         <path d="M7 11V7a5 5 0 0110 0v4" />
       </svg>
     ),
-    color: "bg-[#FFE4ED] border-[#FFBFCE] text-[#E8467C] shadow-clay-pink",
+    color: "bg-[#FBF1D8] border-[#F1DA9A] text-[#B07D14] shadow-clay-pink",
     title: "أمان المؤسسات",
     description:
       "معتمد وفق SOC 2، ومشفر من طرف إلى طرف، ويدعم SSO/SAML وصلاحيات دقيقة. أمان على مستوى المؤسسات بسهولة الشركات الناشئة.",

@@ -8,6 +8,13 @@
   --font-cairo: 'Cairo', sans-serif;
 }
 
+/* Registered so the conic-gradient angle can be animated smoothly */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 @layer base {
   body {
     @apply bg-clay-bg text-clay-text font-sans antialiased;
@@ -18,27 +25,27 @@
 
 @layer components {
   .clay-card {
-    @apply bg-white rounded-clay-lg border-2 border-[#E8E4FF] shadow-clay transition-all duration-200;
+    @apply bg-white rounded-clay-lg border-2 border-[#CDEADE] shadow-clay transition-all duration-200;
   }
   .clay-card:hover {
     @apply shadow-clay-hover -translate-x-0.5 -translate-y-0.5;
   }
   .clay-btn-primary {
-    @apply bg-clay-primary text-white font-bold rounded-clay border-2 border-[#6356D5]
+    @apply bg-clay-primary text-white font-bold rounded-clay border-2 border-[#075438]
            px-6 py-3 shadow-clay transition-all duration-150 cursor-pointer
            hover:shadow-clay-hover hover:-translate-x-0.5 hover:-translate-y-0.5
            active:translate-x-0.5 active:translate-y-0.5 active:shadow-clay-sm;
   }
   .clay-btn-secondary {
-    @apply bg-white text-clay-primary font-bold rounded-clay border-2 border-[#C4BFEF]
+    @apply bg-white text-clay-primary font-bold rounded-clay border-2 border-[#9FD4BC]
            px-6 py-3 shadow-clay-sm transition-all duration-150 cursor-pointer
            hover:shadow-clay hover:-translate-x-0.5 hover:-translate-y-0.5
            active:translate-x-0.5 active:translate-y-0.5;
   }
   .clay-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full
-           bg-[#EDE9FF] text-clay-primary font-semibold text-sm
-           border border-[#C4BFEF];
+           bg-[#D6EFE4] text-clay-primary font-semibold text-sm
+           border border-[#9FD4BC];
   }
   .section-heading {
     @apply text-4xl md:text-5xl font-black text-clay-text leading-tight;
@@ -56,13 +63,13 @@
   }
   .glass-card:hover {
     background: rgba(255,255,255,0.08);
-    border-color: rgba(124,111,247,0.3);
-    box-shadow: 0 0 30px rgba(124,111,247,0.15);
+    border-color: rgba(52,216,166,0.3);
+    box-shadow: 0 0 30px rgba(52,216,166,0.15);
   }
 
   /* Gradient text */
   .gradient-text {
-    background: linear-gradient(135deg, #7C6FF7 0%, #FF8FAB 50%, #5ECFB1 100%);
+    background: linear-gradient(135deg, #0B7A57 0%, #18A06E 45%, #34D8A6 80%, #7BE8B0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -73,17 +80,17 @@
   /* Dark primary button */
   .dark-btn-primary {
     @apply relative font-bold rounded-clay px-6 py-3 cursor-pointer overflow-hidden
-           transition-all duration-200 text-white border border-[#6356D5];
-    background: linear-gradient(135deg, #7C6FF7, #9B8FF9);
-    box-shadow: 0 0 20px rgba(124,111,247,0.4), -4px 4px 0 0 #4A3CB5;
+           transition-all duration-200 text-white border border-[#075438];
+    background: linear-gradient(135deg, #0B7A57, #13A074);
+    box-shadow: 0 0 20px rgba(52,216,166,0.4), -4px 4px 0 0 #053E2A;
   }
   .dark-btn-primary:hover {
-    box-shadow: 0 0 35px rgba(124,111,247,0.6), -6px 6px 0 0 #4A3CB5;
+    box-shadow: 0 0 35px rgba(52,216,166,0.6), -6px 6px 0 0 #053E2A;
     transform: translate(1px, -1px);
   }
   .dark-btn-primary:active {
     transform: translate(-1px, 1px);
-    box-shadow: 0 0 15px rgba(124,111,247,0.3), -2px 2px 0 0 #4A3CB5;
+    box-shadow: 0 0 15px rgba(52,216,166,0.3), -2px 2px 0 0 #053E2A;
   }
 
   /* Shimmer loader */
@@ -95,6 +102,73 @@
     background-size: 200% 100%;
     animation: shimmer 1.8s linear infinite;
   }
+
+  /* Rotating gradient border (for featured / highlighted cards) */
+  .animated-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .animated-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    padding: 2px;
+    background: conic-gradient(from var(--angle, 0deg),
+      #0B7A57, #34D8A6, #7BE8B0, #E0A82E, #0B7A57);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: border-spin 6s linear infinite;
+    z-index: -1;
+  }
+
+  /* Sweeping shine across buttons on hover */
+  .btn-shine { position: relative; overflow: hidden; }
+  .btn-shine::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg,
+      transparent, rgba(255,255,255,0.45), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.6s ease;
+  }
+  .btn-shine:hover::after { left: 140%; }
+
+  /* Glow lift on hover */
+  .hover-glow {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-glow:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(52,216,166,0.25), 0 12px 40px rgba(4,20,14,0.25);
+  }
+
+  /* Aurora animated mesh background */
+  .aurora {
+    background:
+      radial-gradient(40% 50% at 20% 30%, rgba(11,122,87,0.45), transparent 70%),
+      radial-gradient(35% 45% at 80% 20%, rgba(52,216,166,0.30), transparent 70%),
+      radial-gradient(45% 55% at 60% 80%, rgba(224,168,46,0.18), transparent 70%),
+      radial-gradient(40% 50% at 30% 75%, rgba(11,122,87,0.30), transparent 70%);
+    background-size: 200% 200%;
+    animation: aurora-move 18s ease infinite;
+  }
+}
+
+@layer utilities {
+  /* Marquee track */
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 28s linear infinite;
+  }
+  .marquee-rtl { animation-direction: reverse; }
+  .marquee-paused:hover .marquee-track { animation-play-state: paused; }
 }
 
 @layer utilities {
@@ -109,7 +183,8 @@
   .animate-float, .animate-float-delay, .animate-float-slow,
   .animate-bounce-slow, .animate-pulse-glow, .animate-gradient-shift,
   .animate-shimmer, .animate-orb-drift, .animate-orb-drift-2,
-  .animate-spin-slow, .gradient-text {
-    animation: none;
+  .animate-spin-slow, .gradient-text, .aurora, .marquee-track,
+  .animated-border::before, .animate-tilt, .animate-shimmer-text {
+    animation: none !important;
   }
 }

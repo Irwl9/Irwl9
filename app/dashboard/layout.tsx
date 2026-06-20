@@ -35,14 +35,14 @@ export default async function DashboardLayout({
   return (
     <div className="min-h-screen bg-clay-bg flex">
       {/* Sidebar */}
-      <aside className="hidden md:flex flex-col w-64 bg-white border-l-2 border-[#E8E4FF] flex-shrink-0">
+      <aside className="hidden md:flex flex-col w-64 bg-white border-l-2 border-[#CDEADE] flex-shrink-0">
         {/* Logo */}
-        <div className="px-5 py-5 border-b-2 border-[#E8E4FF]">
+        <div className="px-5 py-5 border-b-2 border-[#CDEADE]">
           <a
             href="/"
             className="flex items-center gap-2 font-black text-lg text-clay-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary rounded-md"
           >
-            <span className="w-7 h-7 rounded-lg bg-clay-primary flex items-center justify-center text-white text-xs font-black border-2 border-[#6356D5] flex-shrink-0">
+            <span className="w-7 h-7 rounded-lg bg-clay-primary flex items-center justify-center text-white text-xs font-black border-2 border-[#075438] flex-shrink-0">
               F
             </span>
             FlowSaaS
@@ -65,8 +65,8 @@ export default async function DashboardLayout({
               href={item.href}
               className={`flex items-center gap-3 px-3 py-2.5 rounded-clay font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary ${
                 item.active
-                  ? "bg-[#EDE9FF] text-clay-primary"
-                  : "text-clay-muted hover:bg-[#F5F3FF] hover:text-clay-text"
+                  ? "bg-[#D6EFE4] text-clay-primary"
+                  : "text-clay-muted hover:bg-[#EEF7F2] hover:text-clay-text"
               }`}
               aria-current={item.active ? "page" : undefined}
             >
@@ -79,9 +79,9 @@ export default async function DashboardLayout({
         </nav>
 
         {/* User + sign out */}
-        <div className="px-3 py-4 border-t-2 border-[#E8E4FF]">
+        <div className="px-3 py-4 border-t-2 border-[#CDEADE]">
           <div className="flex items-center gap-3 px-2 py-2">
-            <div className="w-8 h-8 rounded-full bg-[#EDE9FF] border-2 border-[#C4BFEF] flex items-center justify-center text-clay-primary font-black text-xs flex-shrink-0">
+            <div className="w-8 h-8 rounded-full bg-[#D6EFE4] border-2 border-[#9FD4BC] flex items-center justify-center text-clay-primary font-black text-xs flex-shrink-0">
               {displayName[0].toUpperCase()}
             </div>
             <div className="flex-1 min-w-0">
@@ -92,7 +92,7 @@ export default async function DashboardLayout({
           <form action={signOut} className="mt-2">
             <button
               type="submit"
-              className="w-full flex items-center gap-3 px-3 py-2 rounded-clay font-semibold text-sm text-clay-muted hover:bg-[#FFE4ED] hover:text-[#E8467C] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary"
+              className="w-full flex items-center gap-3 px-3 py-2 rounded-clay font-semibold text-sm text-clay-muted hover:bg-[#FBF1D8] hover:text-[#B07D14] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-clay-primary"
             >
               {/* Sign-out icon — mirrored for RTL */}
               <svg className="w-4 h-4 flex-shrink-0 scale-x-[-1]" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24" aria-hidden="true">

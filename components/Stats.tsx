@@ -4,8 +4,8 @@ import AnimateIn from "@/components/ui/AnimateIn";
 
 const stats = [
   { value: 3400, suffix: "+", label: "فريق يستخدم FlowSaaS", color: "text-clay-primary" },
-  { value: 98, suffix: "%", label: "رضا المستخدمين", color: "text-[#5ECFB1]" },
-  { value: 12, suffix: "×", label: "تسريع وقت التخطيط", color: "text-[#FF8FAB]" },
+  { value: 98, suffix: "%", label: "رضا المستخدمين", color: "text-[#34D8A6]" },
+  { value: 12, suffix: "×", label: "تسريع وقت التخطيط", color: "text-[#E0A82E]" },
   { value: 4.9, suffix: "/5", label: "متوسط التقييم", color: "text-[#FFBF69]", decimal: true },
 ];
 
