@@ -1,108 +1,110 @@
+import AnimateIn from "@/components/ui/AnimateIn";
+
 const testimonials = [
   {
-    quote:
-      "قلّص FlowSaaS وقت تخطيط السبرينت لدينا إلى النصف. تجميع المهام بالذكاء الاصطناعي وحده يستحق كل قرش.",
-    name: "سارة ك.",
-    role: "مديرة الهندسة",
-    company: "Stripe",
+    quote: "قبل FlowSaaS كنت أمضي ساعتين كل صباح في جمع التحديثات. الآن الموجز جاهز عند فنجان قهوتي الأول.",
+    name: "سارة المنصور",
+    role: "مديرة هندسة البرمجيات",
     avatar: "س",
-    avatarBg: "bg-[#EDE9FF] text-clay-primary border-[#C4BFEF]",
-    rating: 5,
+    avatarColor: "#7C6FF7",
   },
   {
-    quote:
-      "استبدلنا Jira وNotion وخيوط Slack بأداة واحدة. تواصل الفريق لدينا لم يكن أكثر وضوحاً من أي وقت مضى.",
-    name: "ماركوس ت.",
-    role: "رئيس المنتج",
-    company: "Vercel",
+    quote: "\"اسأل الرئيس\" غيّرت طريقة تحضيري للاجتماعات. سؤال واحد وعندي صورة كاملة عن حالة كل مشروع.",
+    name: "محمد الخالدي",
+    role: "مدير المنتج · شركة ناشئة",
     avatar: "م",
-    avatarBg: "bg-[#E0F9F4] text-[#2AB090] border-[#A8EEE0]",
-    rating: 5,
+    avatarColor: "#FF8FAB",
   },
   {
-    quote:
-      "لوحة التحليلات وحدها غيّرت طريقة تقديم تقاريري للمساهمين. أحب التصميم أيضاً!",
-    name: "بريا ن.",
-    role: "المدير التنفيذي للعمليات",
-    company: "Linear",
-    avatar: "ب",
-    avatarBg: "bg-[#FFE4ED] text-[#E8467C] border-[#FFBFCE]",
-    rating: 5,
+    quote: "الذكاء الاصطناعي في FlowSaaS ليس للاستعراض — يكتب رسائل المتابعة بلهجة طبيعية، وفريقي يستجيب لها فعلاً.",
+    name: "أميرة الشامسي",
+    role: "رئيسة العمليات",
+    avatar: "أ",
+    avatarColor: "#5ECFB1",
   },
 ];
-
-function StarRating({ count }: { count: number }) {
-  return (
-    <div className="flex gap-0.5" aria-label={`${count} من 5 نجوم`} role="img">
-      {Array.from({ length: count }).map((_, i) => (
-        <svg key={i} className="w-4 h-4 text-[#FFBF69]" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-          <path d="M8 1l1.94 4.38L15 6.27l-3.5 3.41.83 4.82L8 12.13l-4.33 2.37.83-4.82L1 6.27l5.06-.89L8 1z" />
-        </svg>
-      ))}
-    </div>
-  );
-}
 
 export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 px-4 bg-white/60"
+      className="relative py-28 px-5 bg-[#060618] overflow-hidden"
       aria-labelledby="testimonials-heading"
     >
-      <div className="mx-auto max-w-6xl">
-        <div className="text-center mb-16">
-          <span className="clay-badge mb-4 inline-flex">رسائل حب</span>
-          <h2 id="testimonials-heading" className="section-heading mb-4">
-            الفرق <span className="text-clay-secondary">تعشق</span> FlowSaaS
+      {/* Orb */}
+      <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-clay-secondary/10 blur-[100px]" />
+
+      <div className="relative z-10 max-w-7xl mx-auto">
+        <AnimateIn className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-clay-secondary/30 bg-clay-secondary/10 text-clay-secondary text-sm font-bold mb-5">
+            <span className="w-1.5 h-1.5 rounded-full bg-clay-secondary animate-pulse" />
+            قالوا عنّا
+          </div>
+          <h2
+            id="testimonials-heading"
+            className="text-4xl md:text-5xl font-black text-white mb-4"
+          >
+            الفرق التي{" "}
+            <span className="gradient-text">تعتمد علينا</span>
           </h2>
-          <p className="section-sub">
-            لا تأخذ كلامنا حجة — اسمع من الفرق التي أنجزت أكثر وضغطت أقل.
+          <p className="text-lg text-white/45 max-w-xl mx-auto">
+            آراء حقيقية من فرق حقيقية — لا تقييمات مصطنعة.
           </p>
-        </div>
+        </AnimateIn>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {testimonials.map((t) => (
-            <blockquote
-              key={t.name}
-              className="clay-card p-6 flex flex-col gap-4"
-            >
-              <StarRating count={t.rating} />
-              <p className="text-clay-text font-semibold leading-relaxed flex-1">
-                &ldquo;{t.quote}&rdquo;
-              </p>
-              <footer className="flex items-center gap-3">
-                <div
-                  className={`w-10 h-10 rounded-full border-2 flex items-center justify-center font-black text-sm flex-shrink-0 ${t.avatarBg}`}
-                  aria-hidden="true"
-                >
-                  {t.avatar}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-16">
+          {testimonials.map((t, i) => (
+            <AnimateIn key={t.name} delay={i * 100} direction="up">
+              <blockquote className="glass-card p-6 flex flex-col gap-5 h-full">
+                {/* Stars */}
+                <div className="flex gap-1" aria-label="5 من 5 نجوم" role="img">
+                  {Array.from({ length: 5 }).map((_, j) => (
+                    <svg key={j} className="w-4 h-4 text-[#FFBF69]" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M8 1l1.94 4.38L15 6.27l-3.5 3.41.83 4.82L8 12.13l-4.33 2.37.83-4.82L1 6.27l5.06-.89L8 1z" />
+                    </svg>
+                  ))}
                 </div>
-                <div>
-                  <cite className="not-italic font-extrabold text-clay-text text-sm">
-                    {t.name}
-                  </cite>
-                  <p className="text-xs text-clay-muted">
-                    {t.role} · {t.company}
-                  </p>
-                </div>
-              </footer>
-            </blockquote>
+
+                <p className="text-white/70 font-semibold leading-relaxed flex-1">
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+
+                <footer className="flex items-center gap-3">
+                  <div
+                    className="w-10 h-10 rounded-full flex items-center justify-center text-white font-black text-sm flex-shrink-0"
+                    style={{ backgroundColor: t.avatarColor }}
+                    aria-hidden="true"
+                  >
+                    {t.avatar}
+                  </div>
+                  <div>
+                    <cite className="not-italic font-extrabold text-white text-sm block">{t.name}</cite>
+                    <p className="text-white/40 text-xs">{t.role}</p>
+                  </div>
+                </footer>
+              </blockquote>
+            </AnimateIn>
           ))}
         </div>
 
-        <div className="mt-16 clay-card p-8 grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
-          {[
-            { value: "+12,000", label: "فريق يستخدم FlowSaaS" },
-            { value: "98%", label: "رضا العملاء" },
-            { value: "4.9/5", label: "متوسط التقييم" },
-          ].map((stat) => (
-            <div key={stat.label}>
-              <div className="text-4xl font-black text-clay-primary mb-1">{stat.value}</div>
-              <div className="text-clay-muted font-semibold text-sm">{stat.label}</div>
-            </div>
-          ))}
-        </div>
+        {/* Bottom trust bar */}
+        <AnimateIn direction="up" delay={300}>
+          <div
+            className="rounded-clay-xl border border-white/8 px-8 py-6 grid grid-cols-3 gap-4 text-center"
+            style={{ background: "rgba(255,255,255,0.04)" }}
+          >
+            {[
+              { val: "+3,400", label: "فريق نشط" },
+              { val: "98%", label: "رضا المستخدمين" },
+              { val: "4.9★", label: "متوسط التقييم" },
+            ].map((s) => (
+              <div key={s.label}>
+                <div className="text-3xl font-black gradient-text mb-1">{s.val}</div>
+                <div className="text-white/40 text-sm font-semibold">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </AnimateIn>
       </div>
     </section>
   );

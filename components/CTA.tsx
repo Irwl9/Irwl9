@@ -1,46 +1,50 @@
+import AnimateIn from "@/components/ui/AnimateIn";
+
 export default function CTA() {
   return (
-    <section className="py-24 px-4" aria-labelledby="cta-heading">
-      <div className="mx-auto max-w-4xl">
-        <div className="clay-card p-12 md:p-16 text-center relative overflow-hidden">
-          <div className="absolute -top-12 -left-12 w-48 h-48 bg-clay-primary/10 rounded-full blur-2xl" aria-hidden="true" />
-          <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-clay-secondary/10 rounded-full blur-2xl" aria-hidden="true" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-clay-accent/5 rounded-full blur-3xl" aria-hidden="true" />
-
-          <div className="relative z-10">
-            <span className="clay-badge mb-6 inline-flex">ابدأ اليوم</span>
-
-            <h2 id="cta-heading" className="section-heading mb-6 max-w-2xl mx-auto">
-              هل أنت مستعد{" "}
-              <span className="text-clay-primary">للانطلاق؟</span>
-            </h2>
-
-            <p className="section-sub mb-10">
-              انضم إلى أكثر من 12,000 فريق انتقل من الفوضى إلى النظام.
-              مجاني للأبد. لا حاجة لبطاقة ائتمان.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/signup" className="clay-btn-primary text-lg px-10 py-4">
-                ابدأ مجاناً — للأبد
-              </a>
-              <a
-                href="#"
-                className="clay-btn-secondary text-lg px-10 py-4 flex items-center justify-center gap-2"
-              >
-                <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-                </svg>
-                تحدث مع المبيعات
-              </a>
-            </div>
-
-            <p className="mt-6 text-sm text-clay-muted font-semibold">
-              تجربة مجانية 14 يوماً &nbsp;·&nbsp; بدون رسوم إعداد &nbsp;·&nbsp; إلغاء في أي وقت
-            </p>
-          </div>
-        </div>
+    <section
+      className="relative py-28 px-5 bg-clay-bg overflow-hidden"
+      aria-labelledby="cta-heading"
+    >
+      {/* Background orbs */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-clay-primary/15 blur-[80px]" />
+        <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-56 h-56 rounded-full bg-clay-secondary/15 blur-[80px]" />
       </div>
+
+      <AnimateIn className="relative z-10 max-w-3xl mx-auto text-center">
+        {/* Icon */}
+        <div className="w-16 h-16 rounded-clay-lg bg-clay-primary mx-auto mb-7 flex items-center justify-center shadow-glow animate-pulse-glow">
+          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+          </svg>
+        </div>
+
+        <h2
+          id="cta-heading"
+          className="text-4xl md:text-5xl font-black text-clay-text mb-5 leading-tight"
+        >
+          فريقك يستحق{" "}
+          <span className="text-clay-primary">رئيس أعمال ذكي</span>
+        </h2>
+
+        <p className="text-lg text-clay-muted mb-10 max-w-xl mx-auto">
+          ابدأ مجاناً. لا بطاقة ائتمان. لا تعقيد. فقط فريق أكثر إنتاجية من اليوم الأول.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+          <a href="/signup" className="clay-btn-primary text-lg px-10 py-4">
+            ابدأ مجاناً الآن
+          </a>
+          <a href="/login" className="clay-btn-secondary text-lg px-10 py-4">
+            لديك حساب؟ سجّل دخولك
+          </a>
+        </div>
+
+        <p className="text-sm text-clay-muted/70 font-semibold">
+          تجربة مجانية 14 يوماً &nbsp;·&nbsp; بدون رسوم إعداد &nbsp;·&nbsp; إلغاء في أي وقت
+        </p>
+      </AnimateIn>
     </section>
   );
 }

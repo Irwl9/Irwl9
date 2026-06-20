@@ -1,6 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Features from "@/components/Features";
+import Stats from "@/components/Stats";
+import AIFeatures from "@/components/AIFeatures";
+import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
@@ -12,16 +14,18 @@ export default function Home() {
     <>
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:left-4 clay-btn-primary text-sm"
+        className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-4 focus:right-4 clay-btn-primary text-sm"
       >
-        Skip to main content
+        انتقل إلى المحتوى الرئيسي
       </a>
 
       <Navbar />
 
       <main id="main-content">
         <Hero />
-        <Features />
+        <Stats />
+        <AIFeatures />
+        <HowItWorks />
         <Testimonials />
         <Pricing />
         <FAQ />
